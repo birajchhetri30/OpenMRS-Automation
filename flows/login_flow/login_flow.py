@@ -1,11 +1,13 @@
 from screens.login.login_screen import LoginScreen
-from models.values.location import Location
+from values.location import Location
+from keyword_core.page_provider import get_page
 from playwright.sync_api import Page
 
 
 class LoginFlow:
-    def __init__(self, page: Page) -> None:
-        self.login_screen = LoginScreen(page)
+    def __init__(self) -> None:
+        self.page = get_page()
+        self.login_screen = LoginScreen(self.page)
     
     def perform_login(self, username: str, password: str, location: Location) -> None:
         self.login_screen.username_field.fill(username)
