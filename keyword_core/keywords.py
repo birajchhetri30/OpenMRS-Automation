@@ -12,6 +12,6 @@ class Keywords:
     LOGIN = KeywordData(
         data_type=LoginInfo,
         log_when_executed=lambda login_info: (
-            f"Login with username: {login_info.username}"
+            f"Login with username: {login_info.username} and location: {login_info.location}"
         )
     )
