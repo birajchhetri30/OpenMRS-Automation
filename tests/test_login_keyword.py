@@ -1,13 +1,22 @@
+import pytest
 from keyword_core.keyword_execution import Execute
 from keyword_core.keywords import Keywords
 from values.location import Location
 from values.login_info import LoginInfo
 from keyword_core.page_provider import get_page
 
-def test_login_keyword():
+@pytest.mark.parametrize("location", [
+    Location.LABORATORY,
+    Location.ISOLATION_WARD,
+    Location.INPATIENT_WARD,
+    Location.OUTPATIENT_CLINIC,
+    Location.PHARMACY,
+    Location.REGISTRATION_DESK,
+])
+def test_login_keyword(location):
+    # Arrange: Set up test data
     username = "admin"
     password = "Admin123"
-    location = Location.ISOLATION_WARD
 
     login_info = LoginInfo(
         username=username,
