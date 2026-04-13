@@ -4,12 +4,12 @@ from playwright.sync_api import Locator, Page
 class LoginScreen:
     _USERNAME_FIELD_ID = '#username'
     _PASSWORD_FIELD_ID = '#password'
-    _INPATIENT_WARD_BUTTON_ID = '#Inpatient Ward'
-    _ISOLATION_WARD_BUTTON_ID = '#Isolation Ward'
+    _INPATIENT_WARD_BUTTON_ID = '[id="Inpatient Ward"]'
+    _ISOLATION_WARD_BUTTON_ID = '[id="Isolation Ward"]'
     _LABORATORY_BUTTON_ID = '#Laboratory'
-    _OUTPATIENT_CLINIC_BUTTON_ID = '#Outpatient Clinic'
+    _OUTPATIENT_CLINIC_BUTTON_ID = '[id="Outpatient Clinic"]'
     _PHARMACY_BUTTON_ID = '#Pharmacy'
-    _REGISTRATION_DESK_BUTTON_ID = '#Registration Desk'
+    _REGISTRATION_DESK_BUTTON_ID = '[id="Registration Desk"]'
     _LOGIN_BUTTON_ID = '#loginButton'
 
     def __init__(self, page: Page) -> None:
@@ -21,6 +21,6 @@ class LoginScreen:
         self.laboratory_button = self.page.locator(self._LABORATORY_BUTTON_ID)
         self.outpatient_clinic_button = self.page.locator(self._OUTPATIENT_CLINIC_BUTTON_ID)
         self.pharmacy_button = self.page.locator(self._PHARMACY_BUTTON_ID)
-        self.registration_deck_button = self.page.locator(self._REGISTRATION_DESK_BUTTON_ID)
+        self.registration_desk_button = self.page.locator(self._REGISTRATION_DESK_BUTTON_ID)
         self.login_button = self.page.locator(self._LOGIN_BUTTON_ID)
  
