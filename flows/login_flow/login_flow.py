@@ -10,6 +10,7 @@ class LoginFlow:
         self.login_screen = LoginScreen(self.page)
     
     def perform_login(self, username: str, password: str, location: Location) -> None:
+        self.page.goto("https://o2.openmrs.org/openmrs/login.htm")
         self.login_screen.username_field.fill(username)
         self.login_screen.password_field.fill(password)
         
@@ -24,7 +25,7 @@ class LoginFlow:
         elif location == Location.PHARMACY:
             self.login_screen.pharmacy_button.click()
         elif location == Location.REGISTRATION_DESK:
-            self.login_screen.registration_deck_button.click()
+            self.login_screen.registration_desk_button.click()
         
         self.login_screen.login_button.click()
 
