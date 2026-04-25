@@ -1,3 +1,4 @@
+from flows.register_patient.register_patient_flow import RegisterPatientFlow
 from keyword_core.keywords import Keywords, KeywordData
 from values.login_info import LoginInfo
 from flows.login_flow.login_flow import LoginFlow
@@ -13,6 +14,8 @@ class KeywordMapping:
     def _mapping(self):
         self._mapping_dict[Keywords.LOGIN] = self._login
         self._mapping_dict[Keywords.LOGOUT] = self._logout
+        self._mapping_dict[Keywords.TO_REGISTER_PATIENT_PAGE] = self._to_register_patient_page
+        self._mapping_dict[Keywords.REGISTER_PATIENT] = self._register_patient
 
     
     def _login(self, login_info: LoginInfo):
@@ -26,3 +29,11 @@ class KeywordMapping:
     def _logout(self, _ignored_arg):
         home_flow = HomeFlow()
         home_flow.perform_logout()
+
+    def _to_register_patient_page(self, _ignored_arg):
+        home_flow = HomeFlow()
+        home_flow.home_screen.register_patient_button.click()
+
+    def _register_patient(self, register_patient):
+        register_patient_flow = RegisterPatientFlow()
+        register_patient_flow.register_patient(register_patient)

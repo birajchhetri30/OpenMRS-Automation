@@ -21,3 +21,13 @@ class Keywords:
         data_type=None,
         log_when_executed=lambda _: "Logout from the application"
     )
+
+    TO_REGISTER_PATIENT_PAGE = KeywordData(
+        data_type=None,
+        log_when_executed=lambda _: "Navigate to the Register Patient page"
+    )
+
+    REGISTER_PATIENT = KeywordData(
+        data_type=RegisterPatient,
+        log_when_executed=lambda register_patient: f"Register a new patient: {repr(register_patient)}"
+    )
