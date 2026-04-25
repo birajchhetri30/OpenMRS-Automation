@@ -5,7 +5,7 @@ from playwright.sync_api import Page
 
 
 class LoginFlow:
-    def __init__(self) -> None:
+    def __init__(self):
         self.page = get_page()
         self.login_screen = LoginScreen(self.page)
     
