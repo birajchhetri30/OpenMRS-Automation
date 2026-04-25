@@ -4,7 +4,7 @@ class HomeScreen:
     # _FIND_PATIENT_RECORD_BUTTON_ID = ''
     # _ACTIVE_VISITS_BUTTON_ID = ''
     # _CAPTURE_VITALS_BUTTON_ID = ''
-    _REGISTER_PATIENT_BUTTON_ID = 'referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension'
+    _REGISTER_PATIENT_BUTTON_ID = '#referenceapplication-registrationapp-registerPatient-homepageLink-referenceapplication-registrationapp-registerPatient-homepageLink-extension'
     # _APPOINTMENT_SCHEDULING_BUTTON_ID = ''
     # _REPORTS_BUTTON_ID = ''
     # _DATA_MANAGEMENT_BUTTON_ID = ''
