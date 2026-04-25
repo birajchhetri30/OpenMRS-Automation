@@ -1,11 +1,7 @@
-from dataclasses import dataclass
+from enum import Enum
 
 
-@dataclass
-class Location:
-    """
-    Enum data class representing the different locations in the OpenMRS application.
-    """
+class Location(Enum):
     INPATIENT_WARD = 'Inpatient Ward'
     ISOLATION_WARD = 'Isolation Ward'
     LABORATORY = 'Laboratory'
