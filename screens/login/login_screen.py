@@ -12,7 +12,7 @@ class LoginScreen:
     _REGISTRATION_DESK_BUTTON_ID = '[id="Registration Desk"]'
     _LOGIN_BUTTON_ID = '#loginButton'
 
-    def __init__(self, page: Page) -> None:
+    def __init__(self, page: Page):
         self.page = page
         self.username_field = self.page.locator(self._USERNAME_FIELD_ID)
         self.password_field = self.page.locator(self._PASSWORD_FIELD_ID)
